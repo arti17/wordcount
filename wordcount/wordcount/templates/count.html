@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Count</title>
-</head>
-<body>
+{% extends 'base.html' %}
+<title>{% block title %}{% endblock %}</title>
+
+{% block body %}
   <h1>There are {{ count }} words in your text.</h1>
 
   <a href="{% url 'index' %}">Start again</a>
@@ -20,5 +15,4 @@
     {{ word }} - {{ counttotal }}
     <br>
   {% endfor %}
-</body>
-</html>
+{% endblock %}
